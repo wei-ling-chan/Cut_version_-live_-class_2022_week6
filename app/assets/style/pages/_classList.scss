@@ -1,0 +1,54 @@
+.classList{
+  .filter-group{
+    margin-top: 40px;
+  }
+  .button{
+    &:hover{
+      border:1px solid $primary !important;
+      
+      color: $primary !important;
+    }
+  }
+  .class_inner_block{
+    border-radius: 20px;
+    background-color: #2D2D2D !important;
+  }
+  .teacher_info{
+    width: 196px;
+    .teacher_img{
+        width: 100px; 
+        height: 100px;
+        background-position: center center;
+        background-size: cover;
+    }
+    .teacher_img-1{
+        background-image: url('../images/2022-web-layout-training-main/week6-202207/teacher01.jpg');
+    }
+    .teacher_img-2{
+        background-image: url('../images/2022-web-layout-training-main/week6-202207/teacher02.jpg');
+    }
+    .teacher_img-3{
+        background-image: url('../images/2022-web-layout-training-main/week6-202207/teacher03.jpg');
+    }
+    .teacher_img-4{
+        background-image: url('../images/2022-web-layout-training-main/week6-202207/teacher04.jpg');
+    }
+  
+    
+  }
+  .class_summary{
+    .button{
+        line-height: 1.9;
+        font-size: 18px;
+    }
+  }    
+}
+
+// RWD
+@include mobile{
+  .classList{
+    .class_inner_block{
+      padding: 32px 24px;
+    }
+  }
+}

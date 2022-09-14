@@ -1,0 +1,370 @@
+// Horizontal gradient, from left to right 
+@mixin gradient-x($start-color: $primary, $end-color: $secondary, $start-percent: null, $end-percent: null) {
+  background-image: linear-gradient(104deg, $start-color $start-percent, $end-color $end-percent);
+}
+@mixin gradient-button-x($start-color: $secondary, $end-color: $primary, $start-percent: null, $end-percent: null) {
+  background-image: linear-gradient(104deg, $start-color $start-percent, $end-color $end-percent);
+}
+
+.gradient-x{
+  @include gradient-x;
+}
+.gradient-button-x{
+  @include gradient-button-x;
+}
+
+//  Vertical gradient, from top to bottom 
+@mixin gradient-y($start-color: $primary, $end-color: $secondary, $start-percent: null, $end-percent: null) {
+  background-image: linear-gradient(90deg, $start-color $start-percent, $end-color $end-percent);
+}
+
+.gradient-y{
+  @include gradient-y;
+}
+
+.text-gradient-y{
+  @include gradient-y;  
+  background-clip: text;
+  color: transparent;
+}
+
+
+.index{
+  .banner{
+    background-image: url("../images/2022-web-layout-training-main/week6-202207/bg_home.jpg");
+    @media screen and (max-width:767px){
+      height: 336px;;
+    }
+    background-size: cover;
+    background-position: center center ; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    h1{
+      background-image: linear-gradient(180deg, #62DB54,#09ACF5);
+      background-clip: text;
+      color: transparent;
+      
+    }
+    .banner-info{
+      border:1px solid white;      
+      padding:5.3% 8.6%;
+      h1{
+        font-size: 48px;
+        @media screen and (max-width:767px){
+          font-size: 24px;
+        }
+      }   
+    }
+    .square{     
+      width: 10px;
+      height: 10px;         
+    }
+   
+  }
+  .advantage{
+    background-color: #2D2D2D;
+    
+  }
+ .material-icons-outlined,.material-icons{
+    font-size: 40px;
+  }
+
+  .advantage-item{
+    border:1px solid transparent;
+    &:hover{
+      border:1px solid $primary ;
+      border-radius: 10px;
+
+    }
+  }
+  .process{
+    
+    .process-item{     
+      border-radius: 10px;
+      position: relative;
+    }
+    .process-number{
+      position: absolute;
+      top: -35px;
+      left: 30px;      
+    }
+  }
+  .code-term{
+    background-color: #2D2D2D;
+    .code-term-item{
+      border:1px solid white;
+      &:hover{
+        border:1px solid $primary ;
+        color: $primary ;
+      }
+    }
+  }
+  .recommend{
+    background-color:#000000 ;
+    .recommend-item{
+      border-radius: 20px;
+      // padding: 24px 24px 16px 24px;
+    }
+    .card{
+      &:hover{
+        border:1px solid $primary;
+      }      
+    }
+    .card-teacher-img{
+      width: 100px;
+      height: 100px;
+    }
+    .lessom{
+      margin-bottom: 37px;
+    }
+    .card-body{
+      padding: 0 24px 32px 24px;
+    }
+    .recommend-button{
+      color: #FFFFFF;
+      &:hover{
+        color: black;
+      }
+    }
+  }
+  .customized{
+    background-color:#1c1c1c ;
+    img{
+      height: 52%;      
+    }
+    
+    .customized-item{
+      position: relative;    
+     background-size: cover;
+      background-position: center center ;
+      height: 56vh;
+      @media screen and (max-width:767px){
+        height: 40vh;
+      }
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    .item-1{
+      background-image: url('../images/2022-web-layout-training-main/week6-202207/info01.jpg');
+    }
+    .item-2{
+      background-image: url('../images/2022-web-layout-training-main/week6-202207/info02.jpg');
+    }
+    .item-3{
+      background-image: url('../images/2022-web-layout-training-main/week6-202207/info03.jpg');
+    }
+    .item-4{
+      background-image: url('../images/2022-web-layout-training-main/week6-202207/info04.jpg');
+    }
+    .customized-overlay{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #1c1c1c;
+      left: 0;
+      top: 0;
+      opacity: 0.8;
+      z-index: 0;     
+      transition: all 0.4s;
+      &:hover{
+        opacity: 0;
+      }
+    }
+  }
+  .article{
+    background-color: #2D2D2D;
+    
+    .article-item{      
+      position: relative;
+      &:hover{
+        .article-square{
+          position: absolute;           
+          width: 32px;
+          height: 32px;           
+        }
+        .article-square-lt{                  
+          top: 0;
+          left:0;
+          border-radius: 8px 0 0 0; 
+          border-left: 1px solid #62db54;
+          border-top: 1px solid #62db54;               
+        }
+        .article-square-rt{     
+          right: 0;
+          top: 0;
+          border-radius: 0 8px 0 0;
+          border-right: 1px solid #62db54;
+          border-top: 1px solid #62db54;  
+        }
+        .article-square-lb{      
+          bottom:0;
+          left:0;
+          border-radius: 0 0 0 8px;
+          border-left: 1px solid #62db54;
+          border-bottom: 1px solid #62db54;  
+        }
+        .article-square-rb{      
+          bottom: 0;
+          right:0;
+          border-radius: 0 0 8px 0;
+          border-right: 1px solid #62db54;
+          border-bottom: 1px solid #62db54;
+        }
+      }
+    }
+
+
+   
+  }
+  .superpower{
+    
+    height:97vh;
+    background-image: url("../images/2022-web-layout-training-main/week6-202207/bg_share.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    .superpower-share{
+      img{
+        width: 85%;
+        height: 40%;
+        border-radius: 20px;
+      }
+      
+    }
+    .superpower-student{      
+      position: relative;
+      width: 27%;      
+      border-radius:20px 20px 20px 0;      
+      margin-left:-119px;
+      margin-bottom:-48px;
+      @media screen and (max-width:767px){
+       margin: 0;
+      } 
+      img{
+        position: absolute;
+        top: -50px;
+        right:25px;    
+        max-width: 100px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .joinUs-list{
+    background-color: #000000;
+    
+  }
+  .joinUs{
+    background-color:#202020;
+   
+    max-width: 966px;
+    border-radius: 20px;
+    .joinUs-icon{
+      font-size: 103.53px;     
+      line-height: 80px;
+      color: #FFFFFF;
+      opacity: 0.5
+    }
+  }
+}
+
+/*RWD*/
+@include mobile {
+  .index{
+    .process{
+      .process-item{
+        margin-bottom: 50px;
+      }
+      .last{
+        margin-bottom: 0;
+      }
+    }
+    .code-term{
+      .code-term-item{
+        font-size: 16px !important;
+      }
+    }
+    .recommend{
+      .lessom{
+        margin-bottom: 8px;
+      }      
+    }
+    .customized{
+      .customized-info{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h4{
+        text-align: center;
+      }
+      .recommend-icon{
+        text-align: center;        
+      }
+      .material-icons{
+        font-size: 28px;
+      }
+    }
+    .article{
+      h2{
+        font-size: 22px;
+      }
+      h3{
+        font-size: 18px;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+    .superpower{
+      .superpower-share{
+        img{
+          position: relative;
+          left: 27px;
+          margin-bottom: 40px;
+        }
+      }
+      .superpower-student{
+        
+        width: 80%;
+      }
+    }
+    .joinUs-list{
+      padding: 40px 12px 40px 12px;
+      // padding-top: 40px;
+      // padding-bottom: 40px;
+      .joinUs-info{
+        text-align: center;
+      }
+      .joinUs-icon,h3,.add{
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+@include pad{
+  .index{
+    .advantage-item{
+      background-color: #000000;
+      border-radius: 10px;
+      height:100% ;
+    }
+    .customized{      
+      .recommend-icon{
+        text-align: center;
+      }
+      .customized-item{
+        height: 30vh;        
+        justify-content: center;
+        align-items: center;
+        
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
